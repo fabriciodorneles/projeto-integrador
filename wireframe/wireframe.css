@@ -1,0 +1,24 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Comic Sans MS", "Segoe Print", "DejaVu Sans", sans-serif; background: #fff; color: #333; }
+.frame { width: 1280px; height: 800px; border: 3px solid #333; display: flex; flex-direction: column; background: #fafafa; }
+.browser { height: 40px; border-bottom: 2px solid #333; display: flex; align-items: center; gap: 8px; padding: 0 14px; background: #e6e6e6; }
+.dot { width: 12px; height: 12px; border: 2px solid #333; border-radius: 50%; }
+.url { flex: 1; height: 22px; border: 2px solid #333; border-radius: 4px; margin-left: 12px; font-size: 13px; padding: 1px 8px; background: #fff; }
+.box { border: 2px solid #333; border-radius: 6px; background: #fff; }
+.dashed { border: 2px dashed #777; border-radius: 6px; }
+.img-ph { position: relative; border: 2px solid #333; background: #eee; overflow: hidden; }
+.img-ph::before, .img-ph::after { content: ""; position: absolute; top: 50%; left: 50%; width: 150%; height: 2px; background: #999; }
+.img-ph::before { transform: translate(-50%, -50%) rotate(32deg); }
+.img-ph::after { transform: translate(-50%, -50%) rotate(-32deg); }
+.label { font-size: 14px; font-weight: bold; margin-bottom: 6px; }
+.input { height: 40px; border: 2px solid #333; border-radius: 4px; background: #fff; display: flex; align-items: stretch; font-size: 14px; color: #888; }
+.input .addon { width: 44px; border-right: 2px solid #333; background: #ddd; display: flex; align-items: center; justify-content: center; color: #333; font-weight: bold; }
+.input .addon.right { border-right: 0; border-left: 2px solid #333; }
+.input .ph { flex: 1; display: flex; align-items: center; padding: 0 10px; }
+.btn { height: 42px; border: 2px solid #333; border-radius: 4px; background: #555; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 15px; }
+.btn.light { background: #fff; color: #333; }
+.line { height: 10px; background: #ccc; border-radius: 5px; }
+.note { position: absolute; background: #fff7b0; border: 1.5px solid #b8a600; font-size: 13px; padding: 6px 9px; border-radius: 3px; max-width: 220px; color: #444; box-shadow: 2px 2px 0 #d8c800; }
+.page-title { font-size: 26px; font-weight: bold; }
+.caption { font-family: "DejaVu Sans", sans-serif; font-size: 15px; color: #555; margin: 14px 4px 0; }
+.wrap { padding: 20px; display: inline-block; position: relative; }

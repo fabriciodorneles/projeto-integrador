@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Wireframe - Login</title>
+<link rel="stylesheet" href="wireframe.css">
+<style>
+  .content { flex: 1; display: flex; }
+  .side { width: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 18px; border-right: 2px dashed #999; }
+  .side .img-ph { width: 360px; height: 260px; }
+  .main { width: 50%; display: flex; align-items: center; justify-content: center; }
+  .card { width: 420px; padding: 32px; display: flex; flex-direction: column; gap: 18px; }
+  .logo { width: 70px; height: 70px; border-radius: 50%; margin: 0 auto; }
+  .row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .check { display: flex; gap: 6px; align-items: center; }
+  .check i { width: 16px; height: 16px; border: 2px solid #333; display: inline-block; }
+  u { color: #555; }
+</style></head>
+<body><div class="wrap">
+<div class="frame">
+  <div class="browser"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">sistema-academico/index.html</div></div>
+  <div class="content">
+    <div class="side">
+      <div class="img-ph"></div>
+      <div class="page-title">Sistema Acadêmico</div>
+      <div class="line" style="width:300px"></div>
+      <div class="line" style="width:240px"></div>
+    </div>
+    <div class="main">
+      <div class="card box">
+        <div class="img-ph logo"></div>
+        <div class="page-title" style="text-align:center">Acesso do Professor</div>
+        <div>
+          <div class="label">Usuário</div>
+          <div class="input"><span class="addon">@</span><span class="ph">Digite seu usuário</span></div>
+        </div>
+        <div>
+          <div class="label">Senha</div>
+          <div class="input"><span class="addon">🔒</span><span class="ph">••••••••</span><span class="addon right">👁</span></div>
+        </div>
+        <div class="row"><span class="check"><i></i> Lembrar-me</span><u>Esqueci minha senha</u></div>
+        <div class="btn">ENTRAR</div>
+        <div class="btn light">Limpar</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="note" style="top:720px; left:790px">Input groups com ícone (Bootstrap)</div>
+<div class="note" style="top:720px; left:1040px">Buttons: primário e secundário</div>
+<div class="note" style="top:90px; left:60px">Grid: 2 colunas (col-md-6). No celular vira 1 coluna</div>
+<p class="caption">Wireframe 1: Tela de Login</p>
+</div></body></html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Wireframe - Notas</title>
+<link rel="stylesheet" href="wireframe.css">
+<style>
+  .nav { height: 60px; border-bottom: 2px solid #333; background: #d0d0d0; display: flex; align-items: center; padding: 0 24px; gap: 14px; }
+  .nav .img-ph { width: 36px; height: 36px; border-radius: 50%; }
+  .nav .sp { flex: 1; }
+  .nav .btn { height: 34px; width: 90px; font-size: 13px; }
+  .content { flex: 1; padding: 22px 28px; display: grid; grid-template-columns: 5fr 7fr; gap: 24px; }
+  .form { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .table { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { border: 2px solid #333; padding: 8px 6px; text-align: left; }
+  th { background: #ddd; }
+  td .line { height: 8px; }
+  .badge { border: 2px solid #333; border-radius: 10px; padding: 1px 8px; font-size: 11px; background: #eee; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .stat { padding: 10px; text-align: center; font-size: 13px; }
+  .stat b { display: block; font-size: 22px; }
+  .btns { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-top: 4px; }
+</style></head>
+<body><div class="wrap">
+<div class="frame">
+  <div class="browser"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">sistema-academico/notas.html</div></div>
+  <div class="nav"><div class="img-ph"></div><b>Sistema Acadêmico</b><span class="sp"></span><span>Olá, Professor</span><div class="btn light">Sair</div></div>
+  <div class="content">
+    <div class="form box">
+      <div class="page-title" style="font-size:20px">Lançamento de Notas</div>
+      <div><div class="label">Nome do aluno</div><div class="input"><span class="addon">👤</span><span class="ph">Nome completo</span></div></div>
+      <div class="two">
+        <div><div class="label">RGM</div><div class="input"><span class="addon">#</span><span class="ph">00000000</span></div></div>
+        <div><div class="label">Turma</div><div class="input"><span class="addon">🏫</span><span class="ph">Selecione ▾</span></div></div>
+      </div>
+      <div class="two">
+        <div><div class="label">Nota 1</div><div class="input"><span class="addon">N1</span><span class="ph">0 a 10</span></div></div>
+        <div><div class="label">Nota 2</div><div class="input"><span class="addon">N2</span><span class="ph">0 a 10</span></div></div>
+      </div>
+      <div><div class="label">Média (automática)</div><div class="input" style="background:#eee"><span class="addon">∑</span><span class="ph">—</span></div></div>
+      <div class="btns"><div class="btn">SALVAR NOTAS</div><div class="btn light">Limpar</div></div>
+    </div>
+    <div class="table box">
+      <div class="stats">
+        <div class="stat dashed"><b>0</b>Alunos</div>
+        <div class="stat dashed"><b>0</b>Aprovados</div>
+        <div class="stat dashed"><b>0</b>Reprovados</div>
+      </div>
+      <div class="input" style="margin-top:6px"><span class="addon">🔍</span><span class="ph">Buscar aluno por nome ou RGM</span></div>
+      <table>
+        <tr><th>Nome</th><th>RGM</th><th>Turma</th><th>N1</th><th>N2</th><th>Média</th><th>Situação</th><th></th></tr>
+        <tr><td><div class="line" style="width:90px"></div></td><td><div class="line" style="width:50px"></div></td><td>A</td><td>7,0</td><td>8,0</td><td>7,5</td><td><span class="badge">Aprovado</span></td><td>✎ 🗑</td></tr>
+        <tr><td><div class="line" style="width:110px"></div></td><td><div class="line" style="width:50px"></div></td><td>B</td><td>4,0</td><td>5,0</td><td>4,5</td><td><span class="badge">Reprovado</span></td><td>✎ 🗑</td></tr>
+        <tr><td><div class="line" style="width:80px"></div></td><td><div class="line" style="width:50px"></div></td><td>A</td><td>9,0</td><td>6,0</td><td>7,5</td><td><span class="badge">Aprovado</span></td><td>✎ 🗑</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="note" style="top:120px; left:560px">Grid: formulário (col-md-5) + tabela (col-md-7)</div>
+<div class="note" style="top:590px; left:95px">Input groups para Nome, RGM, Turma e Notas</div>
+<div class="note" style="top:660px; left:95px">Buttons: salvar / limpar</div>
+<div class="note" style="top:620px; left:1080px">Média ≥ 6 = Aprovado</div>
+<p class="caption">Wireframe 2: Tela de Digitação de Notas</p>
+</div></body></html>
