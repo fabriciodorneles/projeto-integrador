@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | Sistema Acadêmico Nexus</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container-fluid">
+    <!-- Grid: 2 colunas no desktop, 1 coluna no celular -->
+    <div class="row min-vh-100">
+
+      <!-- Coluna de apresentação -->
+      <section class="col-lg-6 login-hero d-flex flex-column justify-content-center align-items-center text-center p-5">
+        <img src="img/logo.svg" alt="Logo Nexus" class="hero-logo mb-4">
+        <h1 class="display-5 fw-bold">Sistema Acadêmico Nexus</h1>
+        <p class="lead mb-4 opacity-75">Lançamento e acompanhamento de notas de forma simples e rápida.</p>
+        <div class="row g-3 w-100 d-none d-md-flex" style="max-width: 520px;">
+          <div class="col-4 hero-item"><i class="bi bi-pencil-square d-block mb-1"></i><small>Lançar notas</small></div>
+          <div class="col-4 hero-item"><i class="bi bi-calculator d-block mb-1"></i><small>Média automática</small></div>
+          <div class="col-4 hero-item"><i class="bi bi-bar-chart d-block mb-1"></i><small>Situação da turma</small></div>
+        </div>
+      </section>
+
+      <!-- Coluna do formulário -->
+      <section class="col-lg-6 d-flex justify-content-center align-items-center p-4">
+        <div class="card login-card shadow-sm border-0">
+          <div class="card-body p-4 p-md-5">
+            <div class="text-center mb-4">
+              <img src="img/logo.svg" alt="" class="login-logo mb-3">
+              <h2 class="h4 fw-bold mb-1">Acesso do Professor</h2>
+              <p class="text-body-secondary small mb-0">Entre com seu usuário e senha</p>
+            </div>
+
+            <div id="alerta" class="alert alert-danger d-none py-2" role="alert"></div>
+
+            <form id="formLogin" novalidate>
+              <div class="mb-3">
+                <label for="usuario" class="form-label fw-semibold">Usuário</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  <input type="text" class="form-control" id="usuario" placeholder="Digite seu usuário" autocomplete="username" required>
+                  <div class="invalid-feedback">Informe o usuário.</div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="senha" class="form-label fw-semibold">Senha</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                  <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
+                  <button class="btn btn-outline-secondary" type="button" id="verSenha" title="Mostrar senha" aria-label="Mostrar senha">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                  <div class="invalid-feedback">Informe a senha.</div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mb-4 small">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="lembrar">
+                  <label class="form-check-label" for="lembrar">Lembrar-me</label>
+                </div>
+                <a href="#" class="text-nexus" data-bs-toggle="modal" data-bs-target="#modalSenha">Esqueci minha senha</a>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-nexus btn-lg"><i class="bi bi-box-arrow-in-right me-1"></i> Entrar</button>
+                <button type="reset" class="btn btn-outline-secondary"><i class="bi bi-eraser me-1"></i> Limpar</button>
+              </div>
+            </form>
+
+            <div class="alert alert-light border small mt-4 mb-0">
+              <i class="bi bi-info-circle me-1"></i> Acesso de demonstração:
+              usuário <strong>professor</strong> e senha <strong>nexus123</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white-50 text-center py-3">
+    Sistema Acadêmico Nexus &middot; Aluno: Fabricio Bohrer Dorneles
+  </footer>
+
+  <!-- Modal: esqueci minha senha -->
+  <div class="modal fade" id="modalSenha" tabindex="-1" aria-labelledby="modalSenhaTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSenhaTitulo">Recuperar senha</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          Procure a secretaria acadêmica para redefinir sua senha.
+          Para testar o sistema, use o acesso de demonstração exibido na tela de login.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-nexus" data-bs-dismiss="modal">Entendi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

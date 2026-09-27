@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nexus">
+  <polygon points="32,3 57,17.5 57,46.5 32,61 7,46.5 7,17.5" fill="#4f46e5"/>
+  <polygon points="32,10 51,21 51,43 32,54 13,43 13,21" fill="none" stroke="#c7d2fe" stroke-width="2"/>
+  <path d="M22 44V20h4l12 16V20h4v24h-4L26 28v16z" fill="#fff"/>
+</svg>

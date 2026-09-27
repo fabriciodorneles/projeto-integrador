@@ -1,0 +1,66 @@
+:root {
+  --nexus: #4f46e5;
+  --nexus-escuro: #3730a3;
+  --nexus-claro: #eef2ff;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f6fa;
+}
+
+main { flex: 1; }
+
+.btn-nexus {
+  --bs-btn-bg: var(--nexus);
+  --bs-btn-border-color: var(--nexus);
+  --bs-btn-hover-bg: var(--nexus-escuro);
+  --bs-btn-hover-border-color: var(--nexus-escuro);
+  --bs-btn-active-bg: var(--nexus-escuro);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+}
+
+.text-nexus { color: var(--nexus); }
+.bg-nexus { background: var(--nexus); }
+
+/* ---------- Login ---------- */
+.login-hero {
+  background: linear-gradient(135deg, var(--nexus-escuro), var(--nexus) 60%, #7c3aed);
+  color: #fff;
+}
+
+.login-hero .hero-logo { width: 110px; height: 110px; }
+.login-hero .hero-item i { font-size: 1.4rem; }
+
+.login-card { max-width: 440px; width: 100%; }
+.login-logo { width: 64px; height: 64px; }
+
+/* ---------- Notas ---------- */
+.navbar .brand-logo { width: 34px; height: 34px; }
+
+.stat-card { border-left: 4px solid var(--bs-border-color); }
+.stat-card.total { border-left-color: var(--nexus); }
+.stat-card.aprovados { border-left-color: var(--bs-success); }
+.stat-card.reprovados { border-left-color: var(--bs-danger); }
+.stat-card .valor { font-size: 1.8rem; font-weight: 700; line-height: 1; }
+
+.input-group-text { min-width: 44px; justify-content: center; }
+
+.table td, .table th { vertical-align: middle; white-space: nowrap; }
+.table td.nome-aluno { white-space: normal; min-width: 140px; }
+.btn { white-space: nowrap; }
+
+@media (max-width: 575.98px) {
+  .stat-card .card-body { padding: .75rem; }
+  .stat-card .valor { font-size: 1.5rem; }
+  .stat-card small { font-size: .75rem; }
+}
+.table-scroll { max-height: 460px; overflow-y: auto; }
+
+.linha-editando { --bs-table-bg: var(--nexus-claro); }
+
+footer { font-size: .9rem; }
